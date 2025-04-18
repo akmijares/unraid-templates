@@ -1,0 +1,33 @@
+?xml version="1.0"?>
+<Container version="2">
+  <Name>Vorta</Name>
+  <Repository>ghcr.io/borgbase/vorta-docker:latest</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/borgbase/vorta-docker</Project>
+  <Overview>GUI for for Borg Backup.&#xD;
+&#xD;
+Recommended by the Docker dev, you should set a hostname.&#xD;
+&#xD;
+Advanced View -&amp;gt; Extra Parameters -&amp;gt; "--hostname='inserthostnamehere'"</Overview>
+  <Category>Backup:</Category>
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
+  <TemplateURL/>
+  <Icon>https://files.qmax.us/vorta/vorta-512px.png</Icon>
+  <ExtraParams>--hostname="CHANGEME"</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1744936994</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/vorta" Mode="rw" Description="Config location (SSH keys, etc.)" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/vorta</Config>
+  <Config Name="Data" Target="/data" Default="/mnt/user" Mode="ro" Description="The shares you want to backup." Type="Path" Display="always" Required="false" Mask="false">/mnt/user</Config>
+  <Config Name="Port" Target="5800" Default="5810" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">5810</Config>
+  <Config Name="Timezone" Target="tz" Default="" Mode="" Description="For automatic scheduled backups.&#13;&#10;&#13;&#10;To view the full list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" Type="Variable" Display="always" Required="false" Mask="false">America/Toronto</Config>
+  <TailscaleStateDir/>
+</Container>
